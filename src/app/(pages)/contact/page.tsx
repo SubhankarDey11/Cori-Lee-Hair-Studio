@@ -179,7 +179,7 @@ export default function Contact() {
             <div className="mt-12">
               <h3 className="text-xl font-semibold mb-4">Visit Us</h3>
               <p className="text-gray-600 mb-4">
-                We're located in the heart of Fredericksburg, VA. Please call or
+                We&apos;re located in the heart of Fredericksburg, VA. Please call or
                 email to schedule your appointment.
               </p>
               {/* Add Google Maps embed or custom map component here */}
