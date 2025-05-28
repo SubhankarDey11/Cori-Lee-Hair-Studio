@@ -17,7 +17,7 @@ export default function About() {
     {
       name: 'Mike Thompson',
       role: 'Stylist',
-      bio: 'Mike excels in men\'s cuts and contemporary styling techniques.',
+      bio: 'Mike excels in men&apos;s cuts and contemporary styling techniques.',
       image: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800&auto=format&fit=crop&q=60',
     },
   ];
