@@ -1,103 +1,151 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Phone, MapPin, Clock } from "lucide-react";
 
 export default function Home() {
+  const services = [
+    {
+      title: "Haircuts",
+      description: "Professional haircuts for all hair types and styles",
+      image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&auto=format&fit=crop&q=60",
+    },
+    {
+      title: "Hair Coloring",
+      description: "Expert color services including highlights, balayage, and more",
+      image: "https://images.unsplash.com/photo-1560869713-7d0a29430803?w=800&auto=format&fit=crop&q=60",
+    },
+    {
+      title: "Styling",
+      description: "Special occasion styling and everyday looks",
+      image: "https://images.unsplash.com/photo-1560869713-7d0a29430803?w=800&auto=format&fit=crop&q=60",
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah M.",
+      text: "Amazing experience! The staff is professional and the results are always perfect.",
+      rating: 5,
+    },
+    {
+      name: "John D.",
+      text: "Best hair salon in Fredericksburg. I always leave feeling confident and stylish.",
+      rating: 5,
+    },
+    {
+      name: "Emily R.",
+      text: "Cori and her team are incredibly talented. Highly recommend!",
+      rating: 5,
+    },
+  ];
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="space-y-20">
+      {/* Hero Section */}
+      <section className="relative h-[80vh] flex items-center justify-center">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=1600&auto=format&fit=crop&q=60"
+          alt="Woman with beautiful hairstyle"
+          fill
+          className="object-cover"
           priority
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="absolute inset-0 bg-black/50 z-10" />
+        <div className="relative z-20 text-center text-white px-4">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Welcome to Cori Lee Hair Studio
+          </h1>
+          <p className="text-xl md:text-2xl mb-8">
+            Where Style Meets Professionalism
+          </p>
+          <Link
+            href="/contact"
+            className="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            Book Now
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Services Preview */}
+      <section className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-lg overflow-hidden"
+            >
+              <div className="relative h-48">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="text-center mt-8">
+          <Link
+            href="/services"
+            className="inline-block bg-gray-900 text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors"
+          >
+            View All Services
+          </Link>
+        </div>
+      </section>
+
+      {/* Contact Info */}
+      <section className="bg-gray-100 py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="flex flex-col items-center">
+              <Phone className="h-8 w-8 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Call Us</h3>
+              <a href="tel:+15402879392" className="text-gray-600 hover:text-gray-900">
+                (540) 287-9392
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <MapPin className="h-8 w-8 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Location</h3>
+              <p className="text-gray-600">Fredericksburg, VA</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Clock className="h-8 w-8 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Hours</h3>
+              <p className="text-gray-600">By Appointment</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="bg-white p-6 rounded-lg shadow-lg"
+            >
+              <div className="flex items-center mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <span key={i} className="text-yellow-400">★</span>
+                ))}
+              </div>
+              <p className="text-gray-600 mb-4">{testimonial.text}</p>
+              <p className="font-semibold">{testimonial.name}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
