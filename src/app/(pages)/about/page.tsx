@@ -47,11 +47,11 @@ export default function About() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Our Story</h2>
           <p className="text-gray-600 mb-6">
-            At Cori Lee Hair Studio, we are not just about creating beautiful hairstyles – we&apos;re about crafting confidence and self-expression through the art of hair design.
+            At Cori Lee Hair Studio, we&apos;re not just about creating beautiful hairstyles – we&apos;re about crafting confidence and self-expression through the art of hair design.
           </p>
           <p className="text-gray-600">
-            We believe that great hair is more than just a style - it's a
-            reflection of your personality and confidence. That's why we take the
+            We believe that great hair is more than just a style - it&apos;s a
+            reflection of your personality and confidence. That&apos;s why we take the
             time to understand your needs and work with you to achieve the look
             you want.
           </p>
